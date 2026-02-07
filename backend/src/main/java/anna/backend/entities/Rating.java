@@ -16,5 +16,6 @@ public class Rating {
     private String comment;
     private LocalDateTime createdAt;
 
-
+    @ManyToOne
+    private Event event;
 }

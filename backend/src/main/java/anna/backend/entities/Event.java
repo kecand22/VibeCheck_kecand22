@@ -24,4 +24,8 @@ public class Event {
     )
     private List<Artist> artists;
 
+    @OneToMany(
+            mappedBy = "event"
+    )
+    private List<Rating> ratings;
 }
