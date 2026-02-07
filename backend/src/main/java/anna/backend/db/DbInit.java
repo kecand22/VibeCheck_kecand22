@@ -1,5 +1,6 @@
 package anna.backend.db;
 
+import anna.backend.Repositories.ArtistRepository;
 import anna.backend.entities.Artist;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -19,6 +20,12 @@ import java.util.List;
 public class DbInit {
 
 
+    private final ArtistRepository artistRepository;
+
+    public DbInit(ArtistRepository artistRepository) {
+        this.artistRepository = artistRepository;
+    }
+
     @PostConstruct
     public void init(){
         try{
@@ -30,6 +37,13 @@ public class DbInit {
 
             List<Artist> artists = mapper.readerForListOf(Artist.class).readValue(is);
             log.info("Load {} values", artists.size());
+            artists.forEach(a ->
+                    a.getEvents().forEach(e -> {
+                        e.getRatings().forEach(r->
+                                r.setEvent(e));
+                    }));
+            artistRepository.saveAll(artists);
+
         }catch (IOException e){
             throw new RuntimeException(e);
         }
