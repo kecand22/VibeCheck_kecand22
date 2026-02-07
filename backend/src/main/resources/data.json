@@ -1,0 +1,154 @@
+[
+  {
+    "artistId": 1,
+    "firstname": "John",
+    "lastname": "Doe",
+    "description": "Electronic music producer and DJ from Austria.",
+    "imageUrl": "https://example.com/images/john-doe.jpg",
+    "events": [
+      {
+        "eventId": 201,
+        "title": "Vibe Night 2026",
+        "location": "Graz",
+        "eventDate": "2026-05-14",
+        "imageUrl": "https://example.com/images/vibe-night.jpg",
+        "ratings": [
+          { "ratingId": 2001, "stars": 5, "comment": "Insane vibes!", "createdAt": "2026-05-14T23:30:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "artistId": 2,
+    "firstname": "Jane",
+    "lastname": "Smith",
+    "description": "Indie pop singer-songwriter.",
+    "imageUrl": "https://example.com/images/jane-smith.jpg",
+    "events": [
+      {
+        "eventId": 201,
+        "title": "Vibe Night 2026",
+        "location": "Graz",
+        "eventDate": "2026-05-14",
+        "imageUrl": "https://example.com/images/vibe-night.jpg",
+        "ratings": [
+          { "ratingId": 2001, "stars": 5, "comment": "Insane vibes!", "createdAt": "2026-05-14T23:30:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "artistId": 3,
+    "firstname": "Liam",
+    "lastname": "Brown",
+    "description": "Techno DJ from Berlin.",
+    "imageUrl": "https://example.com/images/liam-brown.jpg",
+    "events": [
+      {
+        "eventId": 202,
+        "title": "Techno Underground",
+        "location": "Berlin",
+        "eventDate": "2026-06-01",
+        "imageUrl": "https://example.com/images/techno-underground.jpg",
+        "ratings": [
+          { "ratingId": 2002, "stars": 4, "comment": "Dark and powerful.", "createdAt": "2026-06-01T23:00:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "artistId": 4,
+    "firstname": "Emma",
+    "lastname": "Wilson",
+    "description": "Acoustic folk artist.",
+    "imageUrl": "https://example.com/images/emma-wilson.jpg",
+    "events": [
+      {
+        "eventId": 203,
+        "title": "Summer Beats Festival",
+        "location": "Vienna",
+        "eventDate": "2026-07-03",
+        "imageUrl": "https://example.com/images/summer-beats.jpg",
+        "ratings": [
+          { "ratingId": 2003, "stars": 5, "comment": "Best festival ever!", "createdAt": "2026-07-03T22:10:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "artistId": 5,
+    "firstname": "Noah",
+    "lastname": "Müller",
+    "description": "Hip-hop artist with deep lyrics.",
+    "imageUrl": "https://example.com/images/noah-mueller.jpg",
+    "events": [
+      {
+        "eventId": 203,
+        "title": "Summer Beats Festival",
+        "location": "Vienna",
+        "eventDate": "2026-07-03",
+        "imageUrl": "https://example.com/images/summer-beats.jpg",
+        "ratings": [
+          { "ratingId": 2003, "stars": 5, "comment": "Best festival ever!", "createdAt": "2026-07-03T22:10:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "artistId": 6,
+    "firstname": "Olivia",
+    "lastname": "Garcia",
+    "description": "Latin pop sensation.",
+    "imageUrl": "https://example.com/images/olivia-garcia.jpg",
+    "events": [
+      {
+        "eventId": 203,
+        "title": "Summer Beats Festival",
+        "location": "Vienna",
+        "eventDate": "2026-07-03",
+        "imageUrl": "https://example.com/images/summer-beats.jpg",
+        "ratings": [
+          { "ratingId": 2003, "stars": 5, "comment": "Best festival ever!", "createdAt": "2026-07-03T22:10:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "artistId": 7,
+    "firstname": "Ethan",
+    "lastname": "Keller",
+    "description": "Drum & Bass producer.",
+    "imageUrl": "https://example.com/images/ethan-keller.jpg",
+    "events": [
+      {
+        "eventId": 204,
+        "title": "Bass Explosion",
+        "location": "Prague",
+        "eventDate": "2026-09-12",
+        "imageUrl": "https://example.com/images/bass-explosion.jpg",
+        "ratings": [
+          { "ratingId": 2004, "stars": 5, "comment": "Heavy drops!", "createdAt": "2026-09-12T22:50:00" }
+        ]
+      }
+    ]
+  },
+  {
+    "artistId": 8,
+    "firstname": "Sophia",
+    "lastname": "Rossi",
+    "description": "Classical pianist.",
+    "imageUrl": "https://example.com/images/sophia-rossi.jpg",
+    "events": [
+      {
+        "eventId": 204,
+        "title": "Bass Explosion",
+        "location": "Prague",
+        "eventDate": "2026-09-12",
+        "imageUrl": "https://example.com/images/bass-explosion.jpg",
+        "ratings": [
+          { "ratingId": 2004, "stars": 5, "comment": "Heavy drops!", "createdAt": "2026-09-12T22:50:00" }
+        ]
+      }
+    ]
+  }
+]
