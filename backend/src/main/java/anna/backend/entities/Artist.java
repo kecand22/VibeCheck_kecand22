@@ -1,0 +1,21 @@
+package anna.backend.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Data
+@Entity
+public class Artist {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long artistID;
+
+    private String firstname;
+    private String lastname;
+    private String description;
+    private String imageURL;
+
+}
