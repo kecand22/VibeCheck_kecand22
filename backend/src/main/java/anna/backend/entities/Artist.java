@@ -10,12 +10,12 @@ import java.util.List;
 public class Artist {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long artistID;
+    private Long artistId;
 
     private String firstname;
     private String lastname;
     private String description;
-    private String imageURL;
+    private String imageUrl;
 
     @ManyToMany()
     @JoinTable(

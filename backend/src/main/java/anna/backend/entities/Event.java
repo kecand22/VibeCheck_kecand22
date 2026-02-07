@@ -11,12 +11,12 @@ import java.util.List;
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long eventID;
+    private Long eventId;
 
     private String title;
     private String location;
     private LocalDate eventDate;
-    private String imageURl;
+    private String imageUrl;
 
     @ManyToMany(
            mappedBy = "events"
