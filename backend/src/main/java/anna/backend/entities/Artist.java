@@ -17,9 +17,13 @@ public class Artist {
     private String description;
     private String imageURL;
 
-    @ManyToMany(
-            mappedBy = "artists"
+    @ManyToMany()
+    @JoinTable(
+            name = "event_artist",
+            joinColumns = @JoinColumn(name = "artist_id"),
+            inverseJoinColumns = @JoinColumn(name = "event_id")
     )
+
 
     private List<Event> events;
 }
