@@ -1,12 +1,10 @@
 package anna.backend.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
@@ -19,5 +17,11 @@ public class Event {
     private String location;
     private LocalDate eventDate;
     private String imageURl;
+
+    @ManyToMany(
+           mappedBy = "events"
+
+    )
+    private List<Artist> artists;
 
 }
