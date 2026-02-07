@@ -1,5 +1,6 @@
 package anna.backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @Entity
 public class Event {
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long eventId;
 
@@ -25,7 +27,8 @@ public class Event {
     private List<Artist> artists;
 
     @OneToMany(
-            mappedBy = "event"
+            mappedBy = "event",
+            cascade = CascadeType.ALL
     )
     private List<Rating> ratings;
 }

@@ -1,5 +1,6 @@
 package anna.backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Entity
 public class Artist {
     @Id
+    @JsonIgnore()
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long artistId;
 
@@ -17,7 +19,9 @@ public class Artist {
     private String description;
     private String imageUrl;
 
-    @ManyToMany()
+    @ManyToMany(
+            cascade = CascadeType.PERSIST
+    )
     @JoinTable(
             name = "event_artist",
             joinColumns = @JoinColumn(name = "artist_id"),

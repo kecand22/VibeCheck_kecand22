@@ -1,5 +1,6 @@
 package anna.backend.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -9,6 +10,7 @@ import java.time.LocalDateTime;
 @Data
 public class Rating {
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ratingId;
 
@@ -16,6 +18,8 @@ public class Rating {
     private String comment;
     private LocalDateTime createdAt;
 
-    @ManyToOne
+    @ManyToOne(
+
+    )
     private Event event;
 }
