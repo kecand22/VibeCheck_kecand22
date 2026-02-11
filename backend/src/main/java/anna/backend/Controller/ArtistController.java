@@ -27,4 +27,8 @@ public class ArtistController {
 
     }
 
+    @GetMapping("{artistId}")
+    public ArtistDTO getArtistById(@PathVariable("artistId") long id){
+        return artistService.getArtistById(id);
+    }
 }
