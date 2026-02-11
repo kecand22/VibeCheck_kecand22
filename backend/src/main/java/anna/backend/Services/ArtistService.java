@@ -11,5 +11,38 @@ import java.util.List;
 
 @Service
 public class ArtistService {
+    private final ArtistRepository artistRepository;
 
+    @Autowired
+    public ArtistService(ArtistRepository artistRepository) {
+        this.artistRepository = artistRepository;
+    }
+
+    public List<ArtistDTO> loadAllArtists(){
+        List<Artist> allArtists = this.artistRepository.findAll();
+        List<ArtistDTO> dtoArtist =  new ArrayList<>();
+        allArtists.forEach(a->
+                dtoArtist.add(new ArtistDTO(
+                        a.getArtistId(),
+                        a.getFirstname(),
+                        a.getLastname(),
+                        a.getDescription(),
+                        a.getImageUrl()
+                )));
+
+        return dtoArtist;
+    }
+
+    public ArtistDTO getArtistById(long  id){
+        Artist a = this.artistRepository.findById(id).orElseThrow(RuntimeException::new);
+
+        ArtistDTO dto = new ArtistDTO(
+                a.getArtistId(),
+                a.getFirstname(),
+                a.getLastname(),
+                a.getDescription(),
+                a.getImageUrl()
+        );
+        return dto;
+    }
 }
