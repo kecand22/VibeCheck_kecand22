@@ -14,5 +14,17 @@ import java.util.List;
 @RestController
 @RequestMapping("api/artists")
 public class ArtistController {
+    private final ArtistService artistService;
+
+    @Autowired
+    public ArtistController(ArtistService artistService) {
+        this.artistService = artistService;
+    }
+
+    @GetMapping("")
+    public List<ArtistDTO > getAllArtists(){
+        return artistService.loadAllArtists();
+
+    }
 
 }
