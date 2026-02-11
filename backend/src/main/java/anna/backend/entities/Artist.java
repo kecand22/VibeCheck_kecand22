@@ -14,8 +14,8 @@ public class Artist {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long artistId;
 
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
     private String description;
     private String imageUrl;
 
